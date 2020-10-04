@@ -10,7 +10,7 @@ yarn docs:build
 cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-#echo 'www.giriawsh.com' > CNAME
+echo 'www.giriawsh.com' > CNAME
 
 git init
 git add -A
