@@ -14,38 +14,50 @@ module.exports = {
         lastUpdated: 'Last Updated',// 文档更新时间：每个文件git最后提交的时间
         searchMaxSuggestions: 10,
         nav: [
-            {text: 'Home', link: '/'},
-            {text: 'Foo', link: '/foo/'},
-            {text: 'Bar', link: '/bar/'},
-            // {text: 'External', link: 'https://google.com', target: '_self', rel: ''},
-            {text: 'External', link: 'https://www.giriawsh.com'},
+            {text: '主页', link: '/'},
             {
-                text: 'Languages',
-                ariaLabel: 'Language Menu',
+                text: '源码学习',
                 items: [
-                    { text: 'Chinese', link: '/language/chinese/' },
-                    { text: 'Japanese', link: '/language/japanese/' }
-                ]
+                    {text: "Element UI", link: '/source/element/'}
+                ],
             },
+            {
+                text: '书籍学习',
+                items: [
+                    {text: "JavaScript权威指南", link: '/books/theDefinitiveGuideToJavaScript/'}
+                ],
+            },
+            {
+                text: '前端相关',
+                items: [
+                    {text: "Node.js", link: '/fe/nodejs/'},
+                    {text: "Vue.js", link: '/fe/vuejs/'},
+                    {text: "Nuxt框架", link: '/fe/nuxtjs/'},
+                ],
+            },
+            // {text: '', link: '/bar/'},
+            // {text: 'External', link: 'https://google.com', target: '_self', rel: ''},
+            {text: '博客文章', link: 'https://www.giriawsh.com'},
         ],
         sidebar: [
             {
-                title: 'FOO',
-                path: '/foo/',
+                title: '源码学习',
+                path: '/source/element/',
                 collapsable: false,
                 children: [
-                    '/foo/one',
+                    '/source/element/element-yuan-ma-xue-xi-alert-zu-jian',
+                    '/source/element/element-yuan-ma-xue-xi-layout-zu-jian',
                 ]
             },
-            {
-                title: 'BAR',
-                path: '/bar/',
-                collapsable: false,
-                children: [
-                    '/bar/three',
-                    '/bar/four',
-                ]
-            }
+            // {
+            //     title: 'BAR',
+            //     path: '/bar/',
+            //     collapsable: false,
+            //     children: [
+            //         '/bar/three',
+            //         '/bar/four',
+            //     ]
+            // }
         ]
     },
 
