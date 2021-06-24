@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.滤镜、模糊效果、渐变 | Girecord</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/pencil.png">
+    <meta name="description" content="Giria的学习记录">
+    <link rel="preload" href="/assets/css/0.styles.a748b10c.css" as="style"><link rel="preload" href="/assets/js/app.d811c258.js" as="script"><link rel="preload" href="/assets/js/2.b0d06978.js" as="script"><link rel="preload" href="/assets/js/62.e5d06d6d.js" as="script"><link rel="prefetch" href="/assets/js/10.c058f302.js"><link rel="prefetch" href="/assets/js/11.8dd384d0.js"><link rel="prefetch" href="/assets/js/12.a57db71e.js"><link rel="prefetch" href="/assets/js/13.ba28784c.js"><link rel="prefetch" href="/assets/js/14.c932930e.js"><link rel="prefetch" href="/assets/js/15.214d63a1.js"><link rel="prefetch" href="/assets/js/16.d7b01f05.js"><link rel="prefetch" href="/assets/js/17.d86602f8.js"><link rel="prefetch" href="/assets/js/18.9f5cd19a.js"><link rel="prefetch" href="/assets/js/19.7fd1e862.js"><link rel="prefetch" href="/assets/js/20.d65b214c.js"><link rel="prefetch" href="/assets/js/21.1b73581a.js"><link rel="prefetch" href="/assets/js/22.a1991fce.js"><link rel="prefetch" href="/assets/js/23.86ad9e68.js"><link rel="prefetch" href="/assets/js/24.65381257.js"><link rel="prefetch" href="/assets/js/25.7bd935b2.js"><link rel="prefetch" href="/assets/js/26.32e3f54b.js"><link rel="prefetch" href="/assets/js/27.4b8a459a.js"><link rel="prefetch" href="/assets/js/28.8fbb372e.js"><link rel="prefetch" href="/assets/js/29.14d35dd5.js"><link rel="prefetch" href="/assets/js/3.2e07bdbd.js"><link rel="prefetch" href="/assets/js/30.836a9de2.js"><link rel="prefetch" href="/assets/js/31.557cf90d.js"><link rel="prefetch" href="/assets/js/32.9cb9ce1c.js"><link rel="prefetch" href="/assets/js/33.75bed696.js"><link rel="prefetch" href="/assets/js/34.62b0841c.js"><link rel="prefetch" href="/assets/js/35.ddeecc7e.js"><link rel="prefetch" href="/assets/js/36.dda463c4.js"><link rel="prefetch" href="/assets/js/37.16b89d36.js"><link rel="prefetch" href="/assets/js/38.b10e01fe.js"><link rel="prefetch" href="/assets/js/39.0c104c50.js"><link rel="prefetch" href="/assets/js/4.35c41ba6.js"><link rel="prefetch" href="/assets/js/40.f0cb89f5.js"><link rel="prefetch" href="/assets/js/41.480570b4.js"><link rel="prefetch" href="/assets/js/42.08b42bef.js"><link rel="prefetch" href="/assets/js/43.8d61e275.js"><link rel="prefetch" href="/assets/js/44.b8e43077.js"><link rel="prefetch" href="/assets/js/45.54d487f1.js"><link rel="prefetch" href="/assets/js/46.5a382eae.js"><link rel="prefetch" href="/assets/js/47.1f8796a9.js"><link rel="prefetch" href="/assets/js/48.8d46e23a.js"><link rel="prefetch" href="/assets/js/49.72b8ca20.js"><link rel="prefetch" href="/assets/js/5.7b10027c.js"><link rel="prefetch" href="/assets/js/50.b2344657.js"><link rel="prefetch" href="/assets/js/51.080a56f5.js"><link rel="prefetch" href="/assets/js/52.bad7a065.js"><link rel="prefetch" href="/assets/js/53.ad9bdcfd.js"><link rel="prefetch" href="/assets/js/54.6770d917.js"><link rel="prefetch" href="/assets/js/55.c0172ecd.js"><link rel="prefetch" href="/assets/js/56.49c919d4.js"><link rel="prefetch" href="/assets/js/57.1767b53b.js"><link rel="prefetch" href="/assets/js/58.41eeaa28.js"><link rel="prefetch" href="/assets/js/59.64f20b7f.js"><link rel="prefetch" href="/assets/js/6.5964ef22.js"><link rel="prefetch" href="/assets/js/60.0f75477a.js"><link rel="prefetch" href="/assets/js/61.4be6c4a4.js"><link rel="prefetch" href="/assets/js/63.955d4114.js"><link rel="prefetch" href="/assets/js/64.d3e90038.js"><link rel="prefetch" href="/assets/js/65.e8997251.js"><link rel="prefetch" href="/assets/js/66.e43a4e42.js"><link rel="prefetch" href="/assets/js/67.178746ff.js"><link rel="prefetch" href="/assets/js/68.8b74209e.js"><link rel="prefetch" href="/assets/js/69.cd787813.js"><link rel="prefetch" href="/assets/js/7.a1320352.js"><link rel="prefetch" href="/assets/js/70.51f9e21c.js"><link rel="prefetch" href="/assets/js/71.e52c53ad.js"><link rel="prefetch" href="/assets/js/72.48ee5f30.js"><link rel="prefetch" href="/assets/js/73.d271fa49.js"><link rel="prefetch" href="/assets/js/74.a6baf45f.js"><link rel="prefetch" href="/assets/js/75.096cf42e.js"><link rel="prefetch" href="/assets/js/76.a2318a27.js"><link rel="prefetch" href="/assets/js/8.6a3c595d.js"><link rel="prefetch" href="/assets/js/9.586c950f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a748b10c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Girecord</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码学习" class="dropdown-title"><span class="title">源码学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码学习" class="mobile-dropdown-title"><span class="title">源码学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/source/element/" class="nav-link">
+  Element UI
+</a></li><li class="dropdown-item"><!----> <a href="/source/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍学习" class="dropdown-title"><span class="title">书籍学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍学习" class="mobile-dropdown-title"><span class="title">书籍学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/books/theDefinitiveGuideToJavaScript/" class="nav-link">
+  JavaScript权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/books/theNodeBeginnerBook/" class="nav-link">
+  NodeJS入门
+</a></li><li class="dropdown-item"><!----> <a href="/books/diveIntoNode/" class="nav-link">
+  深入浅出Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/codingInterviews/" class="nav-link">
+  剑指Offer系列
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文学习" class="dropdown-title"><span class="title">博文学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文学习" class="mobile-dropdown-title"><span class="title">博文学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/postsLearning/collect/" class="nav-link">
+  博文收集
+</a></li><li class="dropdown-item"><!----> <a href="/postsLearning/2020/" class="nav-link">
+  2020年
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端相关" class="dropdown-title"><span class="title">前端相关</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端相关" class="mobile-dropdown-title"><span class="title">前端相关</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          JS库相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nodejs/" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-subitem"><a href="/fe/vuejs/" class="nav-link">
+  Vue.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  React.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/fe/svgjs/" class="nav-link router-link-active">
+  SVG.js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nuxtjs/" class="nav-link">
+  Nuxt框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/application/" class="nav-link">
+  志愿填报建议
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.giriawsh.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人文章
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码学习" class="dropdown-title"><span class="title">源码学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码学习" class="mobile-dropdown-title"><span class="title">源码学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/source/element/" class="nav-link">
+  Element UI
+</a></li><li class="dropdown-item"><!----> <a href="/source/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍学习" class="dropdown-title"><span class="title">书籍学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍学习" class="mobile-dropdown-title"><span class="title">书籍学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/books/theDefinitiveGuideToJavaScript/" class="nav-link">
+  JavaScript权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/books/theNodeBeginnerBook/" class="nav-link">
+  NodeJS入门
+</a></li><li class="dropdown-item"><!----> <a href="/books/diveIntoNode/" class="nav-link">
+  深入浅出Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/codingInterviews/" class="nav-link">
+  剑指Offer系列
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文学习" class="dropdown-title"><span class="title">博文学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文学习" class="mobile-dropdown-title"><span class="title">博文学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/postsLearning/collect/" class="nav-link">
+  博文收集
+</a></li><li class="dropdown-item"><!----> <a href="/postsLearning/2020/" class="nav-link">
+  2020年
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端相关" class="dropdown-title"><span class="title">前端相关</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端相关" class="mobile-dropdown-title"><span class="title">前端相关</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          JS库相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nodejs/" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-subitem"><a href="/fe/vuejs/" class="nav-link">
+  Vue.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  React.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/fe/svgjs/" class="nav-link router-link-active">
+  SVG.js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nuxtjs/" class="nav-link">
+  Nuxt框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/application/" class="nav-link">
+  志愿填报建议
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.giriawsh.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人文章
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>SVG学习记录</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/fe/svgjs/svg-xue-xi-xi-lie-1-jian-jie-qian-ru-fang-shi-ji-ben-xing-zhuang.html" class="sidebar-link">1.简介、嵌入方式、基本形状</a></li><li><a href="/fe/svgjs/svg-xue-xi-xi-lie-2-lu-jing-wen-ben-stroke-shu-xing.html" class="sidebar-link">2.路径、文本、stroke属性</a></li><li><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html" aria-current="page" class="active sidebar-link">3.滤镜、模糊效果、渐变</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html#🎨前言" class="sidebar-link">🎨前言</a></li><li class="sidebar-sub-header"><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html#svg滤镜" class="sidebar-link">SVG滤镜</a></li><li class="sidebar-sub-header"><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html#svg模糊效果" class="sidebar-link">SVG模糊效果</a></li><li class="sidebar-sub-header"><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html#阴影" class="sidebar-link">阴影</a></li><li class="sidebar-sub-header"><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html#渐变-线性" class="sidebar-link">渐变-线性</a></li><li class="sidebar-sub-header"><a href="/fe/svgjs/svg-xue-xi-xi-lie-3-lu-jing-mo-hu-xiao-guo-jian-bian.html#渐变-放射性" class="sidebar-link">渐变-放射性</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="🎨前言"><a href="#🎨前言" class="header-anchor">#</a> 🎨前言</h2> <p>WebGL学习系列，结合菜鸟教程、CSDN、MDN等多平台进行学习总结。</p> <h2 id="svg滤镜"><a href="#svg滤镜" class="header-anchor">#</a> SVG滤镜</h2> <p>SVG可用的滤镜是：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>feBlend - 与图像相结合的滤镜
+feColorMatrix - 用于彩色滤光片转换
+feComponentTransfer
+feComposite
+feConvolveMatrix
+feDiffuseLighting
+feDisplacementMap
+feFlood
+feGaussianBlur - 高斯模糊
+feImage
+feMerge
+feMorphology
+feOffset - 过滤阴影
+feSpecularLighting
+feTile
+feTurbulence
+feDistantLight - 用于照明过滤
+fePointLight - 用于照明过滤
+feSpotLight - 用于照明过滤
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="svg模糊效果"><a href="#svg模糊效果" class="header-anchor">#</a> SVG模糊效果</h2> <p>所有互联网的SVG滤镜定义在<code>&lt;defs&gt;</code>元素中。<code>&lt;defs&gt;</code>元素定义短并含有特殊元素（如滤镜）定义。</p> <p><code>&lt;filter&gt;</code>标签用来定义SVG滤镜。<code>&lt;filter&gt;</code>标签使用必需的id属性来定义向图形应用哪个滤镜</p> <p><code>&lt;feGaussianBlur&gt;</code> 元素是用于创建模糊效果：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;f1&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;
+      &lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;15&quot; /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;rect width=&quot;90&quot; height=&quot;90&quot; stroke=&quot;green&quot; stroke-width=&quot;3&quot; fill=&quot;yellow&quot; filter=&quot;url(#f1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>filter	滤镜效果的容器</li> <li>feGaussianBlur	SVG滤镜。执行高斯模糊图像</li> <li>sourceGraphic该关键词表示图形元素自身将作为<filter>原语的原始输入.</filter></li> <li>stdDeviation属性定义模糊量</li> <li><rect>元素的滤镜属性用来把元素链接到&quot;f1&quot;滤镜</rect></li></ul> <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="f1" x="0" y="0"><feGaussianBlur in="SourceGraphic" stdDeviation="15"></feGaussianBlur></filter></defs> <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)"></rect></svg> <h2 id="阴影"><a href="#阴影" class="header-anchor">#</a> 阴影</h2> <p><code>&lt;feOffset&gt;</code>元素是用于创建阴影效果。我们的想法是采取一个SVG图形（图像或元素）并移动它在xy平面上一点儿。</p> <p>第一个例子偏移一个矩形（带<code>&lt;feOffset&gt;</code>），然后混合偏移图像顶部（含<code>&lt;feBlend&gt;</code>）：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;f1&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;200%&quot; height=&quot;200%&quot;&gt;
+      &lt;feOffset result=&quot;offOut&quot; in=&quot;SourceGraphic&quot; dx=&quot;20&quot; dy=&quot;20&quot; /&gt;
+      &lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;offOut&quot; mode=&quot;normal&quot; /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;rect width=&quot;90&quot; height=&quot;90&quot; stroke=&quot;green&quot; stroke-width=&quot;3&quot;
+  fill=&quot;yellow&quot; filter=&quot;url(#f1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li><code>&lt;feBlend&gt;</code>	使用不同的混合模式把两个对象合成在一起</li></ul> <p>偏移图像变的模糊（含 <feGaussianBlur>）</feGaussianBlur></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;f1&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;200%&quot; height=&quot;200%&quot;&gt;
+      &lt;feOffset result=&quot;offOut&quot; in=&quot;SourceGraphic&quot; dx=&quot;20&quot; dy=&quot;20&quot; /&gt;
+      &lt;feGaussianBlur result=&quot;blurOut&quot; in=&quot;offOut&quot; stdDeviation=&quot;10&quot; /&gt;
+      &lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;blurOut&quot; mode=&quot;normal&quot; /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;rect width=&quot;90&quot; height=&quot;90&quot; stroke=&quot;green&quot; stroke-width=&quot;3&quot;
+  fill=&quot;yellow&quot; filter=&quot;url(#f1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>制作一个黑色的阴影：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;f1&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;200%&quot; height=&quot;200%&quot;&gt;
+      &lt;feOffset result=&quot;offOut&quot; in=&quot;SourceAlpha&quot; dx=&quot;20&quot; dy=&quot;20&quot; /&gt;
+      &lt;feGaussianBlur result=&quot;blurOut&quot; in=&quot;offOut&quot; stdDeviation=&quot;10&quot; /&gt;
+      &lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;blurOut&quot; mode=&quot;normal&quot; /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;rect width=&quot;90&quot; height=&quot;90&quot; stroke=&quot;green&quot; stroke-width=&quot;3&quot;
+  fill=&quot;yellow&quot; filter=&quot;url(#f1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li><code>&lt;feOffset&gt;</code>元素的属性改为&quot;SourceAlpha&quot;在Alpha通道使用残影，而不是整个RGBA像素。</li></ul> <p>再为阴影涂上一层颜色</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;f1&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;200%&quot; height=&quot;200%&quot;&gt;
+      &lt;feOffset result=&quot;offOut&quot; in=&quot;SourceGraphic&quot; dx=&quot;20&quot; dy=&quot;20&quot; /&gt;
+      &lt;feColorMatrix result=&quot;matrixOut&quot; in=&quot;offOut&quot; type=&quot;matrix&quot;
+      values=&quot;0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0&quot; /&gt;
+      &lt;feGaussianBlur result=&quot;blurOut&quot; in=&quot;matrixOut&quot; stdDeviation=&quot;10&quot; /&gt;
+      &lt;feBlend in=&quot;SourceGraphic&quot; in2=&quot;blurOut&quot; mode=&quot;normal&quot; /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+  &lt;rect width=&quot;90&quot; height=&quot;90&quot; stroke=&quot;green&quot; stroke-width=&quot;3&quot;
+  fill=&quot;yellow&quot; filter=&quot;url(#f1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><ul><li><code>&lt;feColorMatrix&gt;</code>过滤器是用来转换偏移的图像使之更接近黑色的颜色。 '0.2'矩阵的三个值都获取乘以红色，绿色和蓝色通道。降低其值带来的颜色至黑色（黑色为0）</li></ul> <p>最终效果：</p> <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><filter id="f1" x="0" y="0" width="200%" height="200%"><feOffset result="offOut" in="SourceGraphic" dx="20" dy="20"></feOffset> <feColorMatrix result="matrixOut" in="offOut" type="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"></feColorMatrix> <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10"></feGaussianBlur> <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend></filter></defs> <rect width="90" height="90" stroke="green" stroke-width="3" fill="yellow" filter="url(#f1)"></rect></svg> <h2 id="渐变-线性"><a href="#渐变-线性" class="header-anchor">#</a> 渐变-线性</h2> <p><code>&lt;linearGradient&gt;</code>元素用于定义线性渐变。</p> <p><code>&lt;linearGradient&gt;</code>标签必须嵌套在<code>&lt;defs&gt;</code>的内部。<code>&lt;defs&gt;</code>标签是definitions的缩写，它可对诸如渐变之类的特殊元素进行定义。</p> <p>线性渐变可以定义为水平，垂直或角渐变：</p> <ul><li>当y1和y2相等，而x1和x2不同时，可创建水平渐变</li> <li>当x1和x2相等，而y1和y2不同时，可创建垂直渐变</li> <li>当x1和x2不同，且y1和y2不同时，可创建角形渐变</li></ul> <p>水平渐变：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;grad1&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;0%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(255,255,0);stop-opacity:1&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(255,0,0);stop-opacity:1&quot; /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;ellipse cx=&quot;200&quot; cy=&quot;70&quot; rx=&quot;85&quot; ry=&quot;55&quot; fill=&quot;url(#grad1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ul><li><code>&lt;linearGradient&gt;</code>标签的id属性可为渐变定义一个唯一的名称</li> <li><code>&lt;linearGradient&gt;</code>标签的X1，X2，Y1，Y2属性定义渐变开始和结束位置</li> <li>渐变的颜色范围可由两种或多种颜色组成。每种颜色通过一个<stop>标签来规定。offset属性用来定义渐变的开始和结束位置。</stop></li> <li>填充属性把 ellipse 元素链接到此渐变</li></ul> <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1;"></stop> <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1;"></stop></linearGradient></defs> <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)"></ellipse></svg> <p>垂直线性渐变</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id=&quot;grad1&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(255,255,0);stop-opacity:1&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(255,0,0);stop-opacity:1&quot; /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;ellipse cx=&quot;200&quot; cy=&quot;70&quot; rx=&quot;85&quot; ry=&quot;55&quot; fill=&quot;url(#grad1)&quot; /&gt;
+&lt;/svg&gt;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="渐变-放射性"><a href="#渐变-放射性" class="header-anchor">#</a> 渐变-放射性</h2> <p><code>&lt;radialGradient&gt;</code>元素用于定义放射性渐变。</p> <p><code>&lt;radialGradient&gt;</code>标签必须嵌套在<defs>的内部。</defs></p> <p>放射性渐变从白色到蓝色椭圆：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;radialGradient id=&quot;grad1&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot; fx=&quot;50%&quot; fy=&quot;50%&quot;&gt;
+      &lt;stop offset=&quot;0%&quot; style=&quot;stop-color:rgb(255,255,255);
+      stop-opacity:0&quot; /&gt;
+      &lt;stop offset=&quot;100%&quot; style=&quot;stop-color:rgb(0,0,255);stop-opacity:1&quot; /&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+  &lt;ellipse cx=&quot;200&quot; cy=&quot;70&quot; rx=&quot;85&quot; ry=&quot;55&quot; fill=&quot;url(#grad1)&quot; /&gt;
+&lt;/svg&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><ul><li><code>&lt;radialGradient&gt;</code>标签的 id 属性可为渐变定义一个唯一的名称</li> <li>CX，CY和r属性定义的最外层圆和Fx和Fy定义的最内层圆
+= 渐变颜色范围可以由两个或两个以上的颜色组成。每种颜色用一个<code>&lt;stop&gt;</code>标签指定。offset属性用来定义渐变色开始和结束</li> <li>填充属性把ellipse元素链接到此渐变</li></ul> <svg xmlns="http://www.w3.org/2000/svg" version="1.1"><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0;"></stop> <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1;"></stop></radialGradient></defs> <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)"></ellipse></svg></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/fe/svgjs/svg-xue-xi-xi-lie-2-lu-jing-wen-ben-stroke-shu-xing.html" class="prev">
+        2.路径、文本、stroke属性
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d811c258.js" defer></script><script src="/assets/js/2.b0d06978.js" defer></script><script src="/assets/js/62.e5d06d6d.js" defer></script>
+  </body>
+</html>

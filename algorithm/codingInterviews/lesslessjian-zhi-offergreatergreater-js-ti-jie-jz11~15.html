@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>《剑指Offer》JS题解——JZ11~15 | Girecord</title>
+    <meta name="generator" content="VuePress 1.6.0">
+    <link rel="icon" href="/pencil.png">
+    <meta name="description" content="Giria的学习记录">
+    <link rel="preload" href="/assets/css/0.styles.a748b10c.css" as="style"><link rel="preload" href="/assets/js/app.d811c258.js" as="script"><link rel="preload" href="/assets/js/2.b0d06978.js" as="script"><link rel="preload" href="/assets/js/10.c058f302.js" as="script"><link rel="prefetch" href="/assets/js/11.8dd384d0.js"><link rel="prefetch" href="/assets/js/12.a57db71e.js"><link rel="prefetch" href="/assets/js/13.ba28784c.js"><link rel="prefetch" href="/assets/js/14.c932930e.js"><link rel="prefetch" href="/assets/js/15.214d63a1.js"><link rel="prefetch" href="/assets/js/16.d7b01f05.js"><link rel="prefetch" href="/assets/js/17.d86602f8.js"><link rel="prefetch" href="/assets/js/18.9f5cd19a.js"><link rel="prefetch" href="/assets/js/19.7fd1e862.js"><link rel="prefetch" href="/assets/js/20.d65b214c.js"><link rel="prefetch" href="/assets/js/21.1b73581a.js"><link rel="prefetch" href="/assets/js/22.a1991fce.js"><link rel="prefetch" href="/assets/js/23.86ad9e68.js"><link rel="prefetch" href="/assets/js/24.65381257.js"><link rel="prefetch" href="/assets/js/25.7bd935b2.js"><link rel="prefetch" href="/assets/js/26.32e3f54b.js"><link rel="prefetch" href="/assets/js/27.4b8a459a.js"><link rel="prefetch" href="/assets/js/28.8fbb372e.js"><link rel="prefetch" href="/assets/js/29.14d35dd5.js"><link rel="prefetch" href="/assets/js/3.2e07bdbd.js"><link rel="prefetch" href="/assets/js/30.836a9de2.js"><link rel="prefetch" href="/assets/js/31.557cf90d.js"><link rel="prefetch" href="/assets/js/32.9cb9ce1c.js"><link rel="prefetch" href="/assets/js/33.75bed696.js"><link rel="prefetch" href="/assets/js/34.62b0841c.js"><link rel="prefetch" href="/assets/js/35.ddeecc7e.js"><link rel="prefetch" href="/assets/js/36.dda463c4.js"><link rel="prefetch" href="/assets/js/37.16b89d36.js"><link rel="prefetch" href="/assets/js/38.b10e01fe.js"><link rel="prefetch" href="/assets/js/39.0c104c50.js"><link rel="prefetch" href="/assets/js/4.35c41ba6.js"><link rel="prefetch" href="/assets/js/40.f0cb89f5.js"><link rel="prefetch" href="/assets/js/41.480570b4.js"><link rel="prefetch" href="/assets/js/42.08b42bef.js"><link rel="prefetch" href="/assets/js/43.8d61e275.js"><link rel="prefetch" href="/assets/js/44.b8e43077.js"><link rel="prefetch" href="/assets/js/45.54d487f1.js"><link rel="prefetch" href="/assets/js/46.5a382eae.js"><link rel="prefetch" href="/assets/js/47.1f8796a9.js"><link rel="prefetch" href="/assets/js/48.8d46e23a.js"><link rel="prefetch" href="/assets/js/49.72b8ca20.js"><link rel="prefetch" href="/assets/js/5.7b10027c.js"><link rel="prefetch" href="/assets/js/50.b2344657.js"><link rel="prefetch" href="/assets/js/51.080a56f5.js"><link rel="prefetch" href="/assets/js/52.bad7a065.js"><link rel="prefetch" href="/assets/js/53.ad9bdcfd.js"><link rel="prefetch" href="/assets/js/54.6770d917.js"><link rel="prefetch" href="/assets/js/55.c0172ecd.js"><link rel="prefetch" href="/assets/js/56.49c919d4.js"><link rel="prefetch" href="/assets/js/57.1767b53b.js"><link rel="prefetch" href="/assets/js/58.41eeaa28.js"><link rel="prefetch" href="/assets/js/59.64f20b7f.js"><link rel="prefetch" href="/assets/js/6.5964ef22.js"><link rel="prefetch" href="/assets/js/60.0f75477a.js"><link rel="prefetch" href="/assets/js/61.4be6c4a4.js"><link rel="prefetch" href="/assets/js/62.e5d06d6d.js"><link rel="prefetch" href="/assets/js/63.955d4114.js"><link rel="prefetch" href="/assets/js/64.d3e90038.js"><link rel="prefetch" href="/assets/js/65.e8997251.js"><link rel="prefetch" href="/assets/js/66.e43a4e42.js"><link rel="prefetch" href="/assets/js/67.178746ff.js"><link rel="prefetch" href="/assets/js/68.8b74209e.js"><link rel="prefetch" href="/assets/js/69.cd787813.js"><link rel="prefetch" href="/assets/js/7.a1320352.js"><link rel="prefetch" href="/assets/js/70.51f9e21c.js"><link rel="prefetch" href="/assets/js/71.e52c53ad.js"><link rel="prefetch" href="/assets/js/72.48ee5f30.js"><link rel="prefetch" href="/assets/js/73.d271fa49.js"><link rel="prefetch" href="/assets/js/74.a6baf45f.js"><link rel="prefetch" href="/assets/js/75.096cf42e.js"><link rel="prefetch" href="/assets/js/76.a2318a27.js"><link rel="prefetch" href="/assets/js/8.6a3c595d.js"><link rel="prefetch" href="/assets/js/9.586c950f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a748b10c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Girecord</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码学习" class="dropdown-title"><span class="title">源码学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码学习" class="mobile-dropdown-title"><span class="title">源码学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/source/element/" class="nav-link">
+  Element UI
+</a></li><li class="dropdown-item"><!----> <a href="/source/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍学习" class="dropdown-title"><span class="title">书籍学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍学习" class="mobile-dropdown-title"><span class="title">书籍学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/books/theDefinitiveGuideToJavaScript/" class="nav-link">
+  JavaScript权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/books/theNodeBeginnerBook/" class="nav-link">
+  NodeJS入门
+</a></li><li class="dropdown-item"><!----> <a href="/books/diveIntoNode/" class="nav-link">
+  深入浅出Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/codingInterviews/" class="nav-link router-link-active">
+  剑指Offer系列
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文学习" class="dropdown-title"><span class="title">博文学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文学习" class="mobile-dropdown-title"><span class="title">博文学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/postsLearning/collect/" class="nav-link">
+  博文收集
+</a></li><li class="dropdown-item"><!----> <a href="/postsLearning/2020/" class="nav-link">
+  2020年
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端相关" class="dropdown-title"><span class="title">前端相关</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端相关" class="mobile-dropdown-title"><span class="title">前端相关</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          JS库相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nodejs/" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-subitem"><a href="/fe/vuejs/" class="nav-link">
+  Vue.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  React.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/fe/svgjs/" class="nav-link">
+  SVG.js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nuxtjs/" class="nav-link">
+  Nuxt框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/application/" class="nav-link">
+  志愿填报建议
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.giriawsh.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人文章
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="源码学习" class="dropdown-title"><span class="title">源码学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="源码学习" class="mobile-dropdown-title"><span class="title">源码学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/source/element/" class="nav-link">
+  Element UI
+</a></li><li class="dropdown-item"><!----> <a href="/source/vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍学习" class="dropdown-title"><span class="title">书籍学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍学习" class="mobile-dropdown-title"><span class="title">书籍学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/books/theDefinitiveGuideToJavaScript/" class="nav-link">
+  JavaScript权威指南
+</a></li><li class="dropdown-item"><!----> <a href="/books/theNodeBeginnerBook/" class="nav-link">
+  NodeJS入门
+</a></li><li class="dropdown-item"><!----> <a href="/books/diveIntoNode/" class="nav-link">
+  深入浅出Node.js
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法学习" class="dropdown-title"><span class="title">算法学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法学习" class="mobile-dropdown-title"><span class="title">算法学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/codingInterviews/" class="nav-link router-link-active">
+  剑指Offer系列
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文学习" class="dropdown-title"><span class="title">博文学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文学习" class="mobile-dropdown-title"><span class="title">博文学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/postsLearning/collect/" class="nav-link">
+  博文收集
+</a></li><li class="dropdown-item"><!----> <a href="/postsLearning/2020/" class="nav-link">
+  2020年
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端相关" class="dropdown-title"><span class="title">前端相关</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端相关" class="mobile-dropdown-title"><span class="title">前端相关</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          JS库相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nodejs/" class="nav-link">
+  Node.js
+</a></li><li class="dropdown-subitem"><a href="/fe/vuejs/" class="nav-link">
+  Vue.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  React.js
+</a></li><li class="dropdown-subitem"><a href="/fe/reactjs/" class="nav-link">
+  AJAX
+</a></li><li class="dropdown-subitem"><a href="/fe/svgjs/" class="nav-link">
+  SVG.js
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架相关
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/fe/nuxtjs/" class="nav-link">
+  Nuxt框架
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="其他" class="dropdown-title"><span class="title">其他</span> <span class="arrow down"></span></button> <button type="button" aria-label="其他" class="mobile-dropdown-title"><span class="title">其他</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/others/application/" class="nav-link">
+  志愿填报建议
+</a></li></ul></div></div><div class="nav-item"><a href="https://www.giriawsh.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  个人文章
+  <svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="outbound-link-title" role="img" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><title id="outbound-link-title">(opens new window)</title> <path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>剑指Offer系列</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz1~5.html" class="sidebar-link">《剑指Offer》JS题解——JZ1~5</a></li><li><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz6~10.html" class="sidebar-link">《剑指Offer》JS题解——JZ6~10</a></li><li><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html" aria-current="page" class="active sidebar-link">《剑指Offer》JS题解——JZ11~15</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#题目" class="sidebar-link">题目</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解法" class="sidebar-link">解法</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#题目描述" class="sidebar-link">题目描述</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#答案" class="sidebar-link">答案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解法一" class="sidebar-link">解法一</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解法二" class="sidebar-link">解法二</a></li></ul></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#题目描述-2" class="sidebar-link">题目描述</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解法一-2" class="sidebar-link">解法一</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解法二-2" class="sidebar-link">解法二</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#题目描述-3" class="sidebar-link">题目描述</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解法-2" class="sidebar-link">解法</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#题目描述-4" class="sidebar-link">题目描述</a></li><li class="sidebar-sub-header"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz11~15.html#解答" class="sidebar-link">解答</a></li></ul></li><li><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz16~20.html" class="sidebar-link">《剑指Offer》JS题解——JZ16~20</a></li><li><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz21~25.html" class="sidebar-link">《剑指Offer》JS题解——JZ21~25</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jz11-二进制中1的个数"><a href="#jz11-二进制中1的个数" class="header-anchor">#</a> JZ11 二进制中1的个数</h1> <h2 id="题目"><a href="#题目" class="header-anchor">#</a> 题目</h2> <p>输入一个整数，输出该数32位二进制表示中1的个数。其中负数用补码表示。</p> <h2 id="解法"><a href="#解法" class="header-anchor">#</a> 解法</h2> <p>顺便复习下如何用js十进制转二进制：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>parseInt(n).toString(2)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这题一开始也挺蒙的，后面看了高人指点，能够领略一二，有种玩数竞的感觉。</p> <p>1100 减去1后 -》1011.</p> <p>可以发现减1的结果是把最右边的一个1开始的所有位都取反了。</p> <p>这个时候如果我们再把原来的整数和减去1之后的结果做与运算：1100&amp;1011=1000.</p> <p>也就是说，把一个整数减去1，再和原整数做与运算，<strong>会把该整数最右边一个1变成0</strong>.</p> <p><strong>那么一个整数的二进制有多少个1，就可以进行多少次这样的操作</strong>。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function NumberOf1(n)
+{
+    // write code here
+    var count = 0;
+    while(n)
+    {
+        n = n &amp; (n-1);
+        count++;
+    }
+    return count;
+    
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><img src="https://user-gold-cdn.xitu.io/2020/7/24/1737cc0d717c452e?w=172&amp;h=59&amp;f=png&amp;s=1953" alt="xiaolv"></p> <h1 id="jz12-数值的整数次方"><a href="#jz12-数值的整数次方" class="header-anchor">#</a> JZ12 数值的整数次方</h1> <h2 id="题目描述"><a href="#题目描述" class="header-anchor">#</a> 题目描述</h2> <p>给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。</p> <p>保证base和exponent不同时为0</p> <h2 id="答案"><a href="#答案" class="header-anchor">#</a> 答案</h2> <h3 id="解法一"><a href="#解法一" class="header-anchor">#</a> 解法一</h3> <p>pow函数的简单实现</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>  <span class="token comment">/**
+   * @return {number}
+   */</span>
+  <span class="token keyword">function</span> <span class="token function">Power</span><span class="token punctuation">(</span><span class="token parameter">base<span class="token punctuation">,</span> exponent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// write code here</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>exponent <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>exponent <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> base<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">let</span> ret <span class="token operator">=</span> base<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>exponent <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> exponent<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              ret <span class="token operator">*=</span> base<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>exponent<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              ret <span class="token operator">*=</span> base<span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">return</span> <span class="token number">1</span> <span class="token operator">/</span> ret<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h3 id="解法二"><a href="#解法二" class="header-anchor">#</a> 解法二</h3> <p>应用ES6最新运算符 **</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Power(base, exponent)
+{
+    // write code here
+    return base**exponent;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h1 id="jz13-调整数组顺序使奇数在偶数前面"><a href="#jz13-调整数组顺序使奇数在偶数前面" class="header-anchor">#</a> JZ13 调整数组顺序使奇数在偶数前面</h1> <h2 id="题目描述-2"><a href="#题目描述-2" class="header-anchor">#</a> 题目描述</h2> <p>输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。</p> <h2 id="解法一-2"><a href="#解法一-2" class="header-anchor">#</a> 解法一</h2> <p>开两个数组分别记录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function reOrderArray(array)
+{
+    let oddArray = [];
+        let evenArray = [];
+        for(let i = 0; i &lt; array.length; i++)
+        {
+            if(array[i]%2 === 0){
+                evenArray.push(array[i]);
+            }else{
+                oddArray.push(array[i]);
+            }
+        }
+        return oddArray.concat(evenArray);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="解法二-2"><a href="#解法二-2" class="header-anchor">#</a> 解法二</h2> <p>相当于一个特殊条件判断的插入排序.是奇数的话把他插入到前面，其余数字后移</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function reOrderArray2(array) {
+    let k = 0;
+    for(let i = 0; i &lt; array.length; i++)
+    {
+        let tmp = array[i];
+        if(tmp &amp; 1){//是奇数
+            for(let j = i - 1; j &gt;= k; j--)//到已经排序好的为止
+            {
+                array[j+1] = array[j];
+            }
+            array[k++] = tmp;
+        }
+    }
+    return array;
+}
+console.log(reOrderArray2([1,2,3,4,5,6]))
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h1 id="jz14-链表中倒数第k个节点"><a href="#jz14-链表中倒数第k个节点" class="header-anchor">#</a> JZ14 链表中倒数第k个节点</h1> <h2 id="题目描述-3"><a href="#题目描述-3" class="header-anchor">#</a> 题目描述</h2> <p>输入一个链表，输出该链表中倒数第k个结点。</p> <h2 id="解法-2"><a href="#解法-2" class="header-anchor">#</a> 解法</h2> <p>快慢指针，相距k个，那么快指针到末尾时，慢指针的位置便是倒数k个</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function FindKthToTail(head, k) {
+    if (!head || k &lt; 1) return null;
+    let slowptr = head;
+    let fastptr = head;
+    let count = 0;
+    while (fastptr != null &amp;&amp; count &lt; k) {
+        count++;
+        fastptr = fastptr.next;
+    }
+    if (count &lt; k) return null;//k的取值超过了链表本身的长度
+    while (fastptr != null) {
+        fastptr = fastptr.next;
+        slowptr = slowptr.next;
+    }
+    return slowptr;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h1 id="jz15-反转链表"><a href="#jz15-反转链表" class="header-anchor">#</a> JZ15 反转链表</h1> <h2 id="题目描述-4"><a href="#题目描述-4" class="header-anchor">#</a> 题目描述</h2> <p>输入一个链表，反转链表后，输出新链表的表头。</p> <h2 id="解答"><a href="#解答" class="header-anchor">#</a> 解答</h2> <p>基本思路，保存当前指针.next.next，再将当前指针.next指向当前指针，然后前移</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function ReverseList(pHead) {
+    // write code here
+    if (!pHead) return null;
+    if (!pHead.next) return pHead;
+    let p1 = pHead;
+    let p2 = pHead.next;
+    p1.next = null;
+    let temp;
+    while (p2 != null) {
+        temp = p2.next;
+        p2.next = p1;
+        p1 = p2;
+        p2 = temp;
+    }
+    return p1;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz6~10.html" class="prev">
+        《剑指Offer》JS题解——JZ6~10
+      </a></span> <span class="next"><a href="/algorithm/codingInterviews/lesslessjian-zhi-offergreatergreater-js-ti-jie-jz16~20.html">
+        《剑指Offer》JS题解——JZ16~20
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d811c258.js" defer></script><script src="/assets/js/2.b0d06978.js" defer></script><script src="/assets/js/10.c058f302.js" defer></script>
+  </body>
+</html>
